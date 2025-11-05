@@ -89,7 +89,8 @@ $("#tabelku").on("click", ".btdetil", function () {
   }
   teks = '<table style="width:80%">' + teks + "</table>";
   $(".modal-title").html("Detil Data " + capitalizeFirstLetter(namatable));
-  $("#detil-body").html(teks);
+  $("#detil-body").html('<form id="dynamic_form">' + teks + "</form>");
+
   $("#modal-detil").modal("show");
   $("#modal-btg-edit").hide();
   $("#modal-btg-delete").hide();
@@ -213,7 +214,8 @@ $("#modal-detil").on("click", "#modal-edit", function () {
         '" readonly></td></tr>';
   }
   teks = '<table style="width:80%">' + teks + "</table>";
-  $("#detil-body").html(teks);
+  $("#detil-body").html('<form id="dynamic_form">' + teks + "</form>");
+
   $(".modal-title-detil").html("Edit Data " + capitalizeFirstLetter(namatable));
   $("#modal-btg-edit").show();
   $("#modal-btg-view").hide();
@@ -239,7 +241,8 @@ $("#btn-add").on("click", function () {
   $(".modal-title-detil").html(
     "Tambah Data " + capitalizeFirstLetter(namatable)
   );
-  $("#detil-body").html(teks);
+  $("#detil-body").html('<form id="dynamic_form">' + teks + "</form>");
+
   $("#modal-detil").modal("show");
   $("#modal-btg-edit").show();
   $("#modal-btg-view").hide();
